@@ -1,0 +1,44 @@
+Obtaining and installing StringTie
+----------------------------------
+
+The current version of StringTie can be downloaded from
+  http://ccb.jhu.edu/software/stringtie
+  
+In order to build StringTie from the source package,
+the following steps should be taken:
+
+* Unpack the downloaded StringTie source archive in a directory of your choice, e.g.:
+
+cd ~/src/
+tar xvfz ~/Downloads/stringtie-V.V.V.tar.gz
+
+A directory called stringtie-V.V.V (where V.V.V is the current
+numeric version of the program) will be created in the current directory.
+
+* Change to that directory and build the stringtie executable:
+
+cd stringtie-V.V.V
+make release
+
+Note that simply running `make` will produce an executable which is more
+suitable for debugging and runtime checking but which can be significantly
+slower than the optimized version which is obtained by using the 
+`make release` command.
+
+Running StringTie
+-----------------
+
+Run stringtie from the command line like this:
+
+stringtie [options] <aligned_reads.bam>
+
+The main input of the program is a SAMtools BAM file with RNA-Seq alignments
+sorted by genomic location (for example the `accepted_hits.bam` file produced
+by TopHat).
+
+A list of parameters and options for the program can be obtained by running
+the program with only the -h or --help option.
+
+More detailed usage instructions can be found on the StringTie website: 
+http://ccb.jhu.edu/software/stringtie
+
