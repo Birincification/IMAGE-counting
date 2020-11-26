@@ -1,6 +1,5 @@
 FROM rocker/r-ver:3.5.3
 
-
 RUN apt-get update --fix-missing -qq && \
     apt-get install -y -q \
     vim \
